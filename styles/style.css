@@ -280,15 +280,14 @@ event-info-thumdail-medium{
 }
 
 .event-card section h3{
-    margin: 5px 0 12px 0;
-    font-size: 18px;
-    letter-spacing: .08rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    margin: 5px 0 12px 0;
+    font-size: 20px;
+    letter-spacing: .08rem;
     font-weight: 400;
-    text-transform: uppercase;
-    /*Afbreken van de tekst*/
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
+
 }
 
 .event-card h4{
