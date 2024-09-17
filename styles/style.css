@@ -123,6 +123,7 @@ h4{
 
 p{
     font-family: 'Europa', sans-serif;
+    color: var(--dark-color-text);
 }
 
 a{
