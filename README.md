@@ -195,6 +195,9 @@ Daarnaast sprak ook een blinde man over de toegankelijkheid van websites voor he
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
+  Op dinsdag kreeg ik een melding van Github Desktop. Er was geen connectie mogelijk. Ik heb dit proberen op te lossen met behulp van ChatGPT en Youtube. Deze gaven echter niet de gewenste oplossing. Ik ben toen beetje gaan spelen, maar het lukte met nog steeds niet. Ik heb vervolgens aan een studentassistent om hulp gevraagd. Deze kon mij echter ook niet helpen. Ik heb daarna Ivo om hulp gevraagd. Deze kon mij echter ook niet helpen. Hij advisseerde mij om een nieuwe repository aan te maken. Dit heb ik gedaan. Hierin heb ik vervolgens al m'n code ingezet. 
+
+
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
