@@ -307,11 +307,12 @@ event-info-thumdail-medium{
     font-weight: 300;
     margin-bottom: 6px;
     font-size: 14px;
+    align-items: center;
 }
 
-.event-info img{
-    width: 1em;
-    background-color: #ffffff;
+.event-info svg{
+    width: 28px;
+    height: 28px;
 }
 
 .event-card div:last-child{
