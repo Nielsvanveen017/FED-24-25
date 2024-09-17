@@ -263,12 +263,17 @@ article h1{
     border-radius: 1em 1em 0 0 ;
 }
 
-.event-info-thumdail{
+.event-info-thumdail-large{
     height: 30vh;
     width: auto;
     object-fit: cover;
 }
 
+event-info-thumdail-medium{
+    height: 20vh;
+    width: auto;
+    object-fit: cover;
+}
 
 .event-card section{
     margin: -30px 24px 24px 24px;
