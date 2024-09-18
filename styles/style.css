@@ -42,12 +42,14 @@
     font-style: italic;
 }
 
+
 *, *::after, *::before {
   box-sizing:border-box;  
   padding:0;
   margin:0;
+  box-sizing: border-box;
+  
 }
-
 
 
 
@@ -64,49 +66,29 @@
 
 
 
-
-
 /****************/
-/* GENERAL STYLING */
+/* JOUW STYLING */
 /****************/
+
+/* Algemene stijl */
 body{
     background-color: #372E1E;
     margin-bottom: 32px;
 }
 
-header{
-    position: sticky;
-    top: 0;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
-    height: 64px;
-    padding: 16px;
-}
-
-
-nav img{
-    width: 28px;
-    height: 28px;
-}
-
-
 h1{
     font-family: 'Europa', sans-serif;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: 0.05rem;
     color: var(--dark-color-text);
-    text-transform: uppercase;
 }
 
 h2{
     font-family: 'Europa', sans-serif;
     font-size: 32px;   
     text-align: center;
+    font-weight: 500;
     color: var(--dark-color-text);
 }
 
@@ -130,10 +112,137 @@ a{
     font-family: 'Europa', sans-serif; 
 }
 
-article h2{
-    margin: 24px 12px;
+
+
+
+/*********************/
+/* Navigatie balk */
+/*********************/
+header{
+    position: sticky;
+    top: 0;
 }
 
+nav{
+    background-color: #000000;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    top: 0;
+    width: 100%;
+    position: fixed; /* Anders zie je witruimte als je helemaal omhoog of naar beneden scrollt */
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a img{
+    height: 32px;
+    width: 32px;
+}
+
+nav ul li img{
+    height: 14px;
+    width: 12px;
+    transform: rotate(-90deg);
+}
+
+nav ul li a{
+    padding: 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/*********************/
+/* Hamburger menu */
+/*********************/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav-menu{
+    display: flex;
+    gap: 60px;
+    padding: 0 8px;
+    height: 100dvh;
+    position: fixed;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+/* Bron: https://codepen.io/miguelznunez/pen/GRmLxPQ, https://codepen.io/shooft/pen/VwJXNEg*/
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-last-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-last-child(3){
+       transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-last-child(1){
+        transform: translateY(-8px) rotate(-45deg);
+     }
+
+     .nav-menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        gap: 0;
+        flex-direction: column;
+        backdrop-filter: brightness(60%) blur(16px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+     }
+
+
+    
+     .nav-menu.active{
+        top: 70px;
+     }
+    }
+
+.knop{
+    background-color: #000000;
+}
+
+
+
+
+
+/*********************/
+/* Footer */
+/*********************/
 footer{
     display: flex;
     flex-direction: column;
@@ -146,7 +255,7 @@ footer section{
     align-items: center;
     gap: 8px;
 }
-
+    
 footer section img{
     width: 100px;
 }
@@ -174,18 +283,16 @@ footer ul img{
 
 
 
-
-/****************/
-/* CSS SELECTOREN */
-/****************/
-
-/* CSS voor index */
+/*********************/
+/* Hero section */
+/*********************/
 .hero-section{
-    height: 50vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    margin-bottom: 16px;
     padding: 16px;
     margin-top: 120px;
 }
@@ -205,14 +312,16 @@ footer ul img{
     text-align: center;
     width: 100%;
     margin: 10px 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .hero-section p{
+    font-weight: 200;
     color: var(--dark-color-text);
     font-size: 16px;
     text-align: center;
-    margin: 8px 0 16px 0;
+    margin: 8px 0 16px 0;  
+    line-height: 1.8rem 
 }
 
 .hero-section a{
@@ -228,15 +337,12 @@ footer ul img{
     margin-bottom: 0.7em;
 }
 
-.large-button{
-    padding: 8px 16px;
-    border-radius: 100px;
-    border: solid 1px;
-    text-align: center;
-    color: var(--dark-color-text);
-    text-decoration: none;
-}
 
+
+
+/*********************/
+/* Upcoming festival & Events */
+/*********************/
 article {
     padding: 2em 1em 2em 1em;
     display: flex;
@@ -269,14 +375,14 @@ article h1{
     object-fit: cover;
 }
 
-event-info-thumdail-medium{
+.event-info-thumdail-medium{
     height: 20vh;
     width: auto;
     object-fit: cover;
 }
 
 .event-card section{
-    margin: -30px 24px 24px 24px;
+    margin: -50px 24px 24px 24px;
 }
 
 .event-card section h3{
@@ -292,10 +398,11 @@ event-info-thumdail-medium{
 
 .event-card h4{
     margin: 5px 0 5px 0;
+    font-weight: 500;
 }
 
 .event-card p{
-    font-weight: 100;
+    font-weight: 50;
     font-size: 14px;
     line-height: 1.2;
 }
@@ -329,18 +436,11 @@ event-info-thumdail-medium{
     font-weight: 300;
 }
 
-.links-uitlijnen{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.large-button{
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: solid 1px;
+    text-align: center;
+    color: var(--dark-color-text);
+    text-decoration: none;
 }
-
-.links-uitlijnen h2{
-    text-align: left;
-    margin: 0;
-}
-
-.links-uitlijnen p{
-    text-align: left;
-}
-

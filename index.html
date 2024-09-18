@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Tomorrowland</title>
+    <title>Tomorrowland</title>
     <link rel="stylesheet" href="./styles/style.css">
-	<link rel="stylesheet" href="https://use.typekit.net/gpv0wgr.css">
+	<link rel="icon"  href="./images/fav-icon-tomorrowland.png">
 </head>
 <body>
 	<header>
-		<nav>
-			<a href="./index.html"><img src="./images/logo-tomorrowland-wit.png" alt="The Tomorrowland logo in a white version, which takes you to the homepage when clicked"></a>
-			<img src="./svg/hamburger-icon.svg" alt="Hamburger menu icon consisting of three horizontal lines stacked on top of each other, which opens the hamburger menu when clicked">
-		</nav>
+        <nav>
+            <a href="#"><img src="./images/logo-tomorrowland-wit.png" alt="The Tomorrowland logo in a white version, which takes you to the homepage when clicked"></a>
+			<div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+			<!-- Class nodig omdat li anders naast het kruisje komt -->
+			<ul class="nav-menu">
+				<li>
+					<!-- A met p en img erin, omdat dan de chevron(img) ook klikbaar wordt -->
+					<a href="#">
+						<p>Festival & events</p>
+						<img src="./images/download.svg" alt="Chevron pointing down">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>Experiences</p>
+						<img src="./images/download.svg" alt="Chevron pointing down">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>Store</p>
+						<img src="./images/download.svg" alt="Chevron pointing down">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>Music</p>
+						<img src="./images/download.svg" alt="Chevron pointing down">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>More</p>
+						<img src="./images/download.svg" alt="Chevron pointing down">
+					</a>
+				</li>
+            </ul>
+        </nav>
 	</header>
 	<main>
 		<section class="hero-section">
 			<img src="./images/foto-stage-tomorrowland-brazil.png" alt="Photo of the Tomorrowland stage in Brazil, showing the crowd with fireworks in the background">
 			<h1>Tomorrowland Brazil</h1>
-			<p>Prepare for a new adventure and secure your tickets now. <br>Tomorrowland Brasil - October 11 - 13, 2024.</p>
+			<p>7-Day Packages on sale September 21. 4-Day Packages & Festival Passes on sale September 28</p>
 			<a>View Tickets</a>
 		</section>
 		<article>
@@ -54,12 +92,13 @@
 							<path fill="#fff" d="M22 9.108h-1v-2a1 1 0 1 0-2 0v4h-1v-2h-5v-2a1 1 0 1 0-2 0v4h-1v-2H8a2 2 0 0 0-2 2v10.999a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V11.108a2 2 0 0 0-2-2m0 12.999H8v-7.999h14z"></path>
 						</svg>
 						<p>October 11-13, 2024</p>
+						
 					</div>
 					<div class="event-info">
 						<svg xmlns="http://www.w3.org/2000/svg" alt="Icon of a calendar">
 							<path fill="#fff" d="M15 23.889c2.403-2.884 6-7.826 6-11.562 0-3.31-2.691-6-6-6s-6 2.69-6 6c0 3.737 3.599 8.68 6 11.562m0-15.562c2.206 0 4 1.794 4 4 0 2.506-2.437 6.293-4 8.381-1.563-2.086-4-5.87-4-8.381 0-2.206 1.794-4 4-4m0 6c-1.103 0-2-.898-2-2 0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2"></path>
 						</svg>
-						<p>Itu (Sao Paullo), Brazil</p>
+						<p>Itu (Sao Paullo), Brazil.</p>
 					</div>
 					<div>
 						<a>Info</a>
@@ -99,30 +138,6 @@
 				</a>
 			</div>
 		</article>
-		<!-- Dit nog afmaken -->
-		<article>
-			<div class="links-uitlijnen">
-				<h2>Relive Tomorrowland Belgium sets</h2>
-				<p>Find more sets in the Tomorrowland App.</p>
-			</div>
-			<a  class="large-button" href="./pages/upcomingEvents.html">Download app</a>
-		</article>
-		<article>
-			<div class="links-uitlijnen">
-				<h2>One World Radio</h2>
-				<p>Tomorrowland's official radio station.</p>
-			</div>
-			<div>
-				<a class="event-card">
-					<img class="event-info-thumdail-medium" src="./images/one-world-radio-presents.png" alt="...">
-					<section>
-						<h4>One World Radio presents 'Summer Anthems Top 100'</h4>
-						<p>The most defining tracks of your festival summer.</p>		
-					</section>
-				</a>
-			</div>
-		</article>
-
 	</main>
 	<footer>
 		<section>
@@ -140,8 +155,6 @@
 			<li>JOBS<a href="./index.html"></a></li>
 		</ul>
 	</footer>
-	
 	<script defer src="./scripts/script.js"></script>
 </body>
-	
 </html>
